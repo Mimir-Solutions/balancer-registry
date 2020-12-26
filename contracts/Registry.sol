@@ -1,6 +1,6 @@
-pragma solidity 0.5.12;
+pragma solidity 0.8.0;
 
-import "@nomiclabs/buidler/console.sol";
+import "hardhat/console.sol";
 
 import "@openzeppelin/contracts/math/Math.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
