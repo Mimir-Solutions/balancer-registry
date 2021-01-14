@@ -550,7 +550,7 @@ contract ExchangeProxy is Ownable {
 
         if (isETH(token)) {
             weth.withdraw(amount);
-            (bool xfer,) = msg.sender.call.value(amount)("");
+            (bool xfer,) = msg.sender.call{value:amount}("");
             require(xfer, "ERR_ETH_FAILED");
         } else {
             require(token.transfer(msg.sender, amount), "ERR_TRANSFER_FAILED");

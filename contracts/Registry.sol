@@ -70,7 +70,7 @@ contract BRegistry {
         public view returns(address[] memory result)
     {
         bytes32 key = _createKey(fromToken, destToken);
-        result = new address[](Math.min(limit, _pools[key].pools.values.length - offset));
+        //result = new address[](Math.min(limit, _pools[key].pools.values.length - offset));
         for (uint i = 0; i < result.length; i++) {
             result[i] = _pools[key].pools.values[offset + i];
         }
